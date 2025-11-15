@@ -1,0 +1,25 @@
+@url=http://localhost:3000
+
+### Consultar usuarios-roles
+GET {{url}}/usuarios-roles/usuarios/1/roles/2
+
+### Consultar usuarios-roles
+GET {{url}}/usuarios-roles/roles/2/usuarios/1
+
+### Crear usuarios-roles
+POST {{url}}/usuarios-roles
+Content-Type: application/json
+
+{
+    "usuario_Id": 5,
+    "rol_Id": 2,
+}
+
+### Modificar usuarios-roles
+PUT {{url}}/usuarios-roles/usuarios/1/roles/2
+Content-Type: application/json
+
+{
+    "descripcion": "texto nuevo",
+    "nivel": 1
+}

@@ -27,7 +27,7 @@ router.get(
   async (req, res) => {
     const id = Number(req.params.id);
     const [rows] = await db.execute(
-      "SELECT id, username, nombre, apellido, activo FROM usuarios WHERE id=?",
+      "SELECT id, username, nombre, apellido FROM usuarios WHERE id=?",
       [id]
     );
 

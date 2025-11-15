@@ -26,8 +26,8 @@ export const Roles = () => {
 
   return (
     <article>
+      <h2>Gestión de Roles</h2>
       <CrearRol onRolCreado={fetchRoles} />
-      <h2>Roles</h2>
       <table>
         <thead>
           <tr>

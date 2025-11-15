@@ -10,8 +10,9 @@ Content-Type: application/json
     "password": "hola1234"
 }
 
-###
-@token = {{login.response.body.token}}
+### logout
+# @name logout
+POST {{url}}/auth/logout
 
 
 ### Consultar notas de un alumno
@@ -48,6 +49,7 @@ Content-Type: application/json
 
 
 ### consultar notas de un alumno
+# @name consultaNotasAlumno
 POST {{url}}/auth/login
 Content-Type: application/json
 
@@ -56,7 +58,10 @@ Content-Type: application/json
     "password": "hola1234"
 }
 
-
-### Consultar  notas 
+### Consultar  notas
 GET {{url}}/notas/consultaAlumno
-Authorization: Bearer {{token}
+Authorization: Bearer {{token2}}
+
+###
+@token = {{login.response.body.token }}
+@token2 = {{consultaNotasAlumno.response.body.token }}

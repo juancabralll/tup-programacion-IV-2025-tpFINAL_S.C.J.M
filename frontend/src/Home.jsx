@@ -1,10 +1,7 @@
-import { Contador } from "./Contador";
-
 export const Home = () => {
   return (
     <article>
-      <h1>React+React-Router+Login</h1>
-      <Contador />
+      <h1>Sistema de Gestion de Alumnos</h1>
     </article>
-  );
-};
+  )
+}

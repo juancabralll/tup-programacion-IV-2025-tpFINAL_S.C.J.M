@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-// ✅ Obtener todas las materias
+// Obtener todas las materias
 router.get(
   "/",
   verificarAutenticacion,
@@ -21,7 +21,7 @@ router.get(
   }
 );
 
-// ✅ Obtener materia por ID
+// Obtener materia por ID
 router.get(
   "/:id",
   verificarAutenticacion,
@@ -40,7 +40,7 @@ router.get(
   }
 );
 
-// ✅ Crear materia
+// Crear materia
 router.post(
   "/",
   verificarAutenticacion,
@@ -76,7 +76,7 @@ router.post(
   }
 );
 
-// ✅ Actualizar materia
+// Actualizar materia
 router.put(
   "/:id",
   verificarAutenticacion,
@@ -133,7 +133,7 @@ router.put(
   }
 );
 
-// ✅ Eliminar materia
+// Eliminar materia
 router.delete(
   "/:id",
   verificarAutenticacion,

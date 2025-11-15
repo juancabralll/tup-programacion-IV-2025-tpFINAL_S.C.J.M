@@ -73,9 +73,6 @@ export const DetallesUsuario = () => {
       <p>
         Nombre: <b>{usuario.nombre}</b>
       </p>
-      <p>
-        Activo: <b>{usuario.activo ? "Si" : "No"}</b>
-      </p>
       <p>Roles:</p>
       <ul>
         {roles.map((r) => (

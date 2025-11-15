@@ -56,16 +56,16 @@ export function Usuarios() {
 
   return (
     <article>
-      <h2>Usuarios</h2>
+      <h2>Gestión de Usuarios</h2>
       <AuthRol rol="admin">
         <Link role="button" to="/usuarios/crear">
           Nuevo usuario
         </Link>
       </AuthRol>
-      <div className="group">
+      {/* <div className="group">
         <input value={buscar} onChange={(e) => setBuscar(e.target.value)} />
         <button onClick={() => fetchUsuarios(buscar)}>Buscar</button>
-      </div>
+      </div> */}
       <table>
         <thead>
           <tr>
@@ -73,7 +73,6 @@ export function Usuarios() {
             <th>Username</th>
             <th>Apellido</th>
             <th>Nombre</th>
-            <th>Activo</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -84,7 +83,6 @@ export function Usuarios() {
               <td>{u.username}</td>
               <td>{u.apellido}</td>
               <td>{u.nombre}</td>
-              <td>{u.activo ? "Si" : "No"}</td>
               <td>
                 <div>
                   <Link role="button" to={`/usuarios/${u.id}`}>

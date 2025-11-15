@@ -11,7 +11,9 @@ import { Roles } from "./Roles.jsx";
 import { DetallesUsuario } from "./DetallesUsuario.jsx";
 import { CrearUsuario } from "./CrearUsuario.jsx";
 import { ModificarUsuario } from "./ModificarUsuario.jsx";
-
+import { AlumnosPage } from "./AlumnosPage.jsx";
+import { NotasPage } from "./NotasPage.jsx";
+import { MateriasPage } from "./MateriasPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -60,7 +62,39 @@ createRoot(document.getElementById("root")).render(
               path="roles"
               element={
                 <AuthPage>
-                  <Roles />
+                  <AuthRol rol="admin">
+                    <Roles />
+                  </AuthRol>
+                </AuthPage>
+              }
+            />
+            <Route
+              path="alumnos"
+              element={
+                <AuthPage>
+                  <AuthRol rol="admin">
+                    <AlumnosPage />
+                  </AuthRol>
+                </AuthPage>
+              }
+            />
+            <Route
+              path="materias"
+              element={
+                <AuthPage>
+                  <AuthRol rol="admin">
+                    <MateriasPage />
+                  </AuthRol>
+                </AuthPage>
+              }
+            />
+            <Route
+              path="notas"
+              element={
+                <AuthPage>
+                  <AuthRol rol="admin">
+                    <NotasPage />
+                  </AuthRol>
                 </AuthPage>
               }
             />

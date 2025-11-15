@@ -10,13 +10,22 @@ export const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
             <Link to="/usuarios">Usuarios</Link>
           </li>
           <li>
             <Link to="/roles">Roles</Link>
+          </li>
+          <li>
+            <Link to="/alumnos">Alumnos</Link>
+          </li>
+          <li>
+            <Link to="/materias">Materias</Link>
+          </li>
+          <li>
+            <Link to="/notas">Notas</Link>
           </li>
         </ul>
         <li>

@@ -42,7 +42,7 @@ export const AlumnosPage = () => {
   };
 
   return (
-    <section>
+    <article>
       <header className="flex justify-between items-center mb-4">
         <h2>Gestión de Alumnos</h2>
         <AuthRol rol="admin">
@@ -74,7 +74,11 @@ export const AlumnosPage = () => {
                 <td>{a.dni}</td>
                 <td>
                   <AuthRol rol="admin">
-                    <button onClick={() => { setEditAlumno(a); setShowForm(true); }}>
+                    <button
+                      onClick={() => {
+                        setEditAlumno(a);
+                        setShowForm(true);
+                      }}>
                       Editar
                     </button>
                     <button onClick={() => handleDelete(a.id)}>Eliminar</button>
@@ -96,7 +100,7 @@ export const AlumnosPage = () => {
           onSave={handleSave}
         />
       )}
-    </section>
+    </article>
   );
 };
 

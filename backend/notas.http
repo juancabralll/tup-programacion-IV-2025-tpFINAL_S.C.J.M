@@ -1,0 +1,62 @@
+@url=http://localhost:3000
+
+### Login
+# @name login
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "eladmin",
+    "password": "hola1234"
+}
+
+###
+@token = {{login.response.body.token}}
+
+
+### Consultar notas de un alumno
+GET {{url}}/notas/alumno/2
+Authorization: Bearer {{token}}
+
+
+### Crear notas
+POST {{url}}/notas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "alumno_id": 4,
+    "materia_id": 5,
+    "nota1": 1,
+    "nota2": 5,
+    "nota3": 5
+}
+
+### actaulizar notas 
+
+PUT {{url}}/notas/8
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "alumno_id": 4,
+    "materia_id": 5,
+    "nota1": 9,
+    "nota2": 9,
+    "nota3": 10
+}
+
+
+### consultar notas de un alumno
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "pabloc",
+    "password": "hola1234"
+}
+
+
+### Consultar  notas 
+GET {{url}}/notas/consultaAlumno
+Authorization: Bearer {{token}
